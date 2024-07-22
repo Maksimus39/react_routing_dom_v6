@@ -3,7 +3,7 @@ import styles from "./components/Site.module.css";
 import {PageOne} from "./components/pages/PageOne";
 import {PageTwo} from "./components/pages/PageTwo";
 import {PageThree} from "./components/pages/PageThree";
-import {Navigate, Route, Routes} from "react-router-dom";
+import {Navigate, NavLink, Route, Routes} from "react-router-dom";
 import {Error404} from "./components/pages/Error404";
 
 
@@ -13,7 +13,10 @@ function App() {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    Здесь будет навигация
+                    <NavLink to={"/page1"}>ADIDAS</NavLink>
+                    <NavLink to={"/page2/"}>PUMA</NavLink>
+                    <NavLink to={"/page3/"}>ABIBAS</NavLink>
+
                 </div>
                 <div className={styles.content}>
                     Здесь будут кроссовки
