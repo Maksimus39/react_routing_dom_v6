@@ -13,10 +13,15 @@ function App() {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    <NavLink to={"/page1"}>ADIDAS</NavLink>
-                    <NavLink to={"/page2/"}>PUMA</NavLink>
-                    <NavLink to={"/page3/"}>ABIBAS</NavLink>
-
+                    <div><NavLink to={"/page1"}
+                                  className={({isActive}) => isActive ? styles.activeNavLink : styles.navLink}>ADIDAS</NavLink>
+                    </div>
+                    <div><NavLink to={"/page2/"}
+                                  className={({isActive}) => isActive ? styles.activeNavLink : styles.navLink}>PUMA</NavLink>
+                    </div>
+                    <div><NavLink to={"/page3/"}
+                                  className={({isActive}) => isActive ? styles.activeNavLink : styles.navLink}>ABIBAS</NavLink>
+                    </div>
                 </div>
                 <div className={styles.content}>
                     Здесь будут кроссовки
