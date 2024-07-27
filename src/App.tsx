@@ -1,16 +1,17 @@
 import React from 'react';
 import styles from "./components/Site.module.css";
-import {PageOne} from "./components/pages/PageOne";
-import {PageTwo} from "./components/pages/PageTwo";
-import {PageThree} from "./components/pages/PageThree";
+import {ADIDAS} from "./components/pages/Adidas";
+import {PUMA} from "./components/pages/Puma";
+import {ABIBAS} from "./components/pages/Abibas";
 import {Navigate, NavLink, Route, Routes} from "react-router-dom";
 import {Error404} from "./components/pages/Error404";
 import {S} from "./components/pages/_styless"
+import {Model} from "./components/pages/Model";
 
 const PATH = {
-    PAGE1: "/page1",
-    PAGE2: "/page2",
-    PAGE3: "/page3",
+    PAGE1: "/adidas",
+    PAGE2: "/puma",
+    PAGE3: "/abibas",
     PAGEERROR: "/error404",
     PAGEALL: "/*",
 } as const;
@@ -29,11 +30,13 @@ function App() {
                     Здесь будут кроссовки
 
                     <Routes>
-                        <Route path="/" element={<Navigate to={"/page1"}/>}/>
+                        <Route path="/" element={<Navigate to={PATH.PAGE1}/>}/>
 
-                        <Route path={PATH.PAGE1} element={<PageOne/>}/>
-                        <Route path={PATH.PAGE2} element={<PageTwo/>}/>
-                        <Route path={PATH.PAGE3} element={<PageThree/>}/>
+                        <Route path={PATH.PAGE1} element={<ADIDAS/>}/>
+                        <Route path={PATH.PAGE2} element={<PUMA/>}/>
+                        <Route path={PATH.PAGE3} element={<ABIBAS/>}/>
+
+                        <Route path={"/ADIDAS/:id"} element={<Model/>}/>
 
                         <Route path={PATH.PAGEERROR} element={<Error404/>}/>
                         <Route path={PATH.PAGEALL} element={<Navigate to={"/error404"}/>}/>
