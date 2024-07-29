@@ -6,7 +6,9 @@ import {ABIBAS} from "./components/pages/Abibas";
 import {Navigate, NavLink, Route, Routes} from "react-router-dom";
 import {Error404} from "./components/pages/Error404";
 import {S} from "./components/pages/_styless"
-import {Model} from "./components/pages/Model";
+import {ModelAdidas} from "./components/pages/ModelAdidas";
+import {ModelPuma} from "./components/pages/ModelPuma";
+import {ModelAbibas} from "./components/pages/ModelAbibas";
 
 const PATH = {
     PAGE1: "/adidas",
@@ -36,7 +38,9 @@ function App() {
                         <Route path={PATH.PAGE2} element={<PUMA/>}/>
                         <Route path={PATH.PAGE3} element={<ABIBAS/>}/>
 
-                        <Route path={"/ADIDAS/:id"} element={<Model/>}/>
+                        <Route path={"/adidas/:id"} element={<ModelAdidas/>}/>
+                        <Route path={"/puma/:id"} element={<ModelPuma/>}/>
+                        <Route path={"/abibas/:id"} element={<ModelAbibas/>}/>
 
                         <Route path={PATH.PAGEERROR} element={<Error404/>}/>
                         <Route path={PATH.PAGEALL} element={<Navigate to={"/error404"}/>}/>

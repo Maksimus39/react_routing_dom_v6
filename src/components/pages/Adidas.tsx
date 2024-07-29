@@ -1,8 +1,8 @@
 import React from 'react';
-import AdiFom from '../../../src/assets/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp'
+import AdiFom from '../../assets/Adidas/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp'
 import PostMove
-    from '../../../src/assets/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp'
-import SuperStar from '../../../src/assets/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp'
+    from '../../assets/Adidas/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp'
+import SuperStar from '../../assets/Adidas/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp'
 import {Link} from "react-router-dom";
 
 export type AdidasItem = {
@@ -42,7 +42,7 @@ export const ADIDAS = () => {
         <div>
             <h2> ADIDAS</h2>
             <div style={{display: 'flex', justifyContent: 'center'}}>
-                {adidasArr.map((el, index) =>  (
+                {adidasArr.map((el, index) => (
                         <Link key={index} to={`/adidas/${el.id}`}>
                             <img src={el.picture}
                                  alt={el.model}

@@ -2,7 +2,7 @@ import React from 'react';
 import {useParams} from "react-router-dom";
 import {adidasArr} from "./Adidas";
 
-export const Model = () => {
+export const ModelAdidas = () => {
     const params = useParams()
     console.log(params)
     return (
