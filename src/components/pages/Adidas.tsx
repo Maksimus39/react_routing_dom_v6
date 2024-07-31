@@ -43,7 +43,7 @@ export const ADIDAS = () => {
             <h2> ADIDAS</h2>
             <div style={{display: 'flex', justifyContent: 'center'}}>
                 {adidasArr.map((el, index) => (
-                        <Link key={index} to={`/adidas/${el.id}`}>
+                        <Link key={el.id} to={`/adidas/${el.id}`}>
                             <img src={el.picture}
                                  alt={el.model}
                                  style={{width: '200px', height: 'auto', marginRight: '10px'}}
