@@ -3,7 +3,6 @@ import PUMA1 from "../../assets/Puma/puma-1.jpeg"
 import PUMA2 from "../../assets/Puma/puma-2.jpg"
 import PUMA3 from "../../assets/Puma/puma-3.webp"
 import {Link} from "react-router-dom";
-import {adidasArr} from "./Adidas";
 
 export type PumaItem = {
     id: number
@@ -41,8 +40,8 @@ export const PUMA = () => {
         <div>
             <h2>PUMA</h2>
             <div style={{display: 'flex', justifyContent: 'center'}}>
-                {PumaArr.map((el, index) => (
-                        <Link key={index} to={`/puma/${el.id}`}>
+                {PumaArr.map((el) => (
+                        <Link key={el.id} to={`/puma/${el.id}`}>
                             <img src={el.picture}
                                  alt={el.model}
                                  style={{width: '200px', height: 'auto', marginRight: '10px'}}
