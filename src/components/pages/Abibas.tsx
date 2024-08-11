@@ -12,8 +12,6 @@ export type AbibasItem = {
     price: string;
     picture: string;
 }
-
-
 export const abibasArr: AbibasItem[] = [
     {
         id: 1,
@@ -38,14 +36,15 @@ export const abibasArr: AbibasItem[] = [
         picture: abibas3
     }
 ]
+
 export const ABIBAS = () => {
     return (
         <div>
             <h2> ABIBAS</h2>
             <div style={{display: 'flex', justifyContent: 'center'}}>
 
-                {abibasArr.map((el, index) => (
-                        <Link key={index} to={`/abibas/${el.id}`}>
+                {abibasArr.map((el) => (
+                        <Link key={el.id} to={`/abibas/${el.id}`}>
                             <img src={el.picture}
                                  alt={el.model}
                                  style={{width: '200px', height: 'auto', marginRight: '10px'}}
