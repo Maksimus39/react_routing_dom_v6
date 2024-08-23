@@ -7,11 +7,13 @@ import {Navigate, NavLink, Route, Routes} from "react-router-dom";
 import {Error404} from "./components/pages/Error404";
 import {S} from "./components/pages/_styless"
 import {Model} from "./components/pages/Model";
+import {Prices} from "./components/pages/Prices";
 
 const PATH = {
     PAGE1: "/adidas",
     PAGE2: "/puma",
     PAGE3: "/abibas",
+    PAGE4: "/Prices",
     Model: "/:model/:id",
     PAGEERROR: "/error404",
     PAGEALL: "/*",
@@ -26,6 +28,7 @@ function App() {
                     <S.NavWrapper><NavLink to={PATH.PAGE1}>ADIDAS</NavLink></S.NavWrapper>
                     <S.NavWrapper><NavLink to={PATH.PAGE2}>PUMA</NavLink></S.NavWrapper>
                     <S.NavWrapper><NavLink to={PATH.PAGE3}>ABIBAS</NavLink></S.NavWrapper>
+                    <S.NavWrapper><NavLink to={PATH.PAGE4}>Цены для оптовиков</NavLink></S.NavWrapper>
                 </div>
                 <div className={styles.content}>
                     Здесь будут кроссовки
@@ -36,6 +39,7 @@ function App() {
                         <Route path={PATH.PAGE1} element={<ADIDAS/>}/>
                         <Route path={PATH.PAGE2} element={<PUMA/>}/>
                         <Route path={PATH.PAGE3} element={<ABIBAS/>}/>
+                        <Route path={PATH.PAGE4} element={<Prices/>}/>
 
                         <Route path={PATH.Model} element={<Model/>}/>
 
