@@ -1,13 +1,7 @@
 import React from 'react';
 import styles from "./components/Site.module.css";
-import {ADIDAS} from "./components/pages/Adidas";
-import {PUMA} from "./components/pages/Puma";
-import {ABIBAS} from "./components/pages/Abibas";
-import {Navigate, NavLink, Route, Routes} from "react-router-dom";
-import {Error404} from "./components/pages/Error404";
+import {NavLink, Outlet} from "react-router-dom";
 import {S} from "./components/pages/_styless"
-import {Model} from "./components/pages/Model";
-import {Prices} from "./components/pages/Prices";
 
 const PATH = {
     PAGE1: "/adidas",
@@ -33,21 +27,24 @@ function App() {
                 <div className={styles.content}>
                     Здесь будут кроссовки
 
-                    <Routes>
-                        <Route path="/" element={<Navigate to={PATH.PAGE1}/>}/>
 
-                        <Route path={PATH.PAGE1} element={<ADIDAS/>}/>
-                        <Route path={PATH.PAGE2} element={<PUMA/>}/>
-                        <Route path={PATH.PAGE3} element={<ABIBAS/>}/>
-                        <Route path={PATH.PAGE4} element={<Prices/>}/>
-
-                        <Route path={PATH.Model} element={<Model/>}/>
+                    <Outlet/>
 
 
+                    {/*<Routes>*/}
+                    {/*    <Route path="/" element={<Navigate to={PATH.PAGE1}/>}/>*/}
 
-                        <Route path={PATH.PAGEERROR} element={<Error404/>}/>
-                        <Route path={PATH.PAGEALL} element={<Navigate to={"/error404"}/>}/>
-                    </Routes>
+                    {/*    <Route path={PATH.PAGE1} element={<ADIDAS/>}/>*/}
+                    {/*    <Route path={PATH.PAGE2} element={<PUMA/>}/>*/}
+                    {/*    <Route path={PATH.PAGE3} element={<ABIBAS/>}/>*/}
+                    {/*    <Route path={PATH.PAGE4} element={<Prices/>}/>*/}
+
+                    {/*    <Route path={PATH.Model} element={<Model/>}/>*/}
+
+
+                    {/*    <Route path={PATH.PAGEERROR} element={<Error404/>}/>*/}
+                    {/*    <Route path={PATH.PAGEALL} element={<Navigate to={"/error404"}/>}/>*/}
+                    {/*</Routes>*/}
 
                 </div>
             </div>
