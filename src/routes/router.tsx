@@ -1,31 +1,31 @@
 import * as React from "react";
 import {createBrowserRouter,} from "react-router-dom";
-import App from "../App";
+import App, {PATH} from "../App";
 import {Error404} from "../components/pages/Error404";
 import {ADIDAS} from "../components/pages/Adidas";
-import {Crosses} from "../components/pages/crosses";
+import {PUMA} from "../components/pages/Puma";
+import {ABIBAS} from "../components/pages/Abibas";
 
-
-const PATH = {
-    Adidas: "/adidas",
-    Puma: "/puma",
-    Abibas: "/abibas",
-    Prices: "/Prices",
-    Model: "/:model/:id",
-    PAGEERROR: "/error404",
-    PAGEALL: "/*",
-} as const;
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Crosses/>,
+        element: <App/>,
         errorElement: <Error404/>,
         children: [
             {
-                path: PATH.Abibas,
+                path: PATH.Adidas,
                 element: <ADIDAS />,
-            }]
+            },
+            {
+                path: PATH.Puma,
+                element: <PUMA />,
+            },
+            {
+                path: PATH.Abibas,
+                element: <ABIBAS />,
+            },
+        ]
     }
 ]);
 
