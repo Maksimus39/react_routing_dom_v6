@@ -4,8 +4,6 @@ import {NavLink, Outlet} from "react-router-dom";
 import {S} from "./components/pages/_styless"
 
 
-
-
 export const PATH = {
     Adidas: "/adidas",
     Puma: "/puma",
@@ -14,6 +12,8 @@ export const PATH = {
     Model: "/:model/:id",
     PAGEERROR: "/error404",
     PAGEALL: "/*",
+    PROTECTED_PAGE: '/protected'
+
 } as const;
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
                     <S.NavWrapper><NavLink to={PATH.Puma}>PUMA</NavLink></S.NavWrapper>
                     <S.NavWrapper><NavLink to={PATH.Abibas}>ABIBAS</NavLink></S.NavWrapper>
                     <S.NavWrapper><NavLink to={PATH.PAGEALL}>Цены для оптовиков</NavLink></S.NavWrapper>
+                    <S.NavWrapper><NavLink to={PATH.PROTECTED_PAGE}>Защищенная страница</NavLink></S.NavWrapper>
                 </div>
                 <div className={styles.content}>
                     Здесь будут кроссовки
