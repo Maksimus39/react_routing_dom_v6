@@ -10,8 +10,8 @@ export const PATH = {
     Abibas: "/abibas",
     Prices: "/Prices",
     Model: "/:model/:id",
-    PAGEERROR: "/error404",
-    PAGEALL: "/*",
+    PAGE_ERROR: "/error404",
+    PAGE_ALL: "/*",
     PROTECTED_PAGE: '/protected'
 
 } as const;
@@ -25,31 +25,12 @@ function App() {
                     <S.NavWrapper><NavLink to={PATH.Adidas}>ADIDAS</NavLink></S.NavWrapper>
                     <S.NavWrapper><NavLink to={PATH.Puma}>PUMA</NavLink></S.NavWrapper>
                     <S.NavWrapper><NavLink to={PATH.Abibas}>ABIBAS</NavLink></S.NavWrapper>
-                    <S.NavWrapper><NavLink to={PATH.PAGEALL}>Цены для оптовиков</NavLink></S.NavWrapper>
+                    <S.NavWrapper><NavLink to={PATH.PAGE_ALL}>Цены для оптовиков</NavLink></S.NavWrapper>
                     <S.NavWrapper><NavLink to={PATH.PROTECTED_PAGE}>Защищенная страница</NavLink></S.NavWrapper>
                 </div>
                 <div className={styles.content}>
-                    Здесь будут кроссовки
-
 
                     <Outlet/>
-
-
-                    {/*<Routes>*/}
-                    {/*    <Route path="/" element={<Navigate to={PATH.PAGE1}/>}/>*/}
-
-                    {/*    <Route path={PATH.PAGE1} element={<ADIDAS/>}/>*/}
-                    {/*    <Route path={PATH.PAGE2} element={<PUMA/>}/>*/}
-                    {/*    <Route path={PATH.PAGE3} element={<ABIBAS/>}/>*/}
-                    {/*    <Route path={PATH.PAGE4} element={<Prices/>}/>*/}
-
-                    {/*    <Route path={PATH.Model} element={<Model/>}/>*/}
-
-
-                    {/*    <Route path={PATH.PAGEERROR} element={<Error404/>}/>*/}
-                    {/*    <Route path={PATH.PAGEALL} element={<Navigate to={"/error404"}/>}/>*/}
-                    {/*</Routes>*/}
-
                 </div>
             </div>
             <div className={styles.footer}>abibas 2023</div>

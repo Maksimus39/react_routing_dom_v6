@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 import {Navigate} from "react-router-dom";
 
 type Props = {
@@ -11,7 +11,7 @@ export const ProtectedRoute = ({children}: Props) => {
 
     return (
         <div>
-            {logged ? children : <Navigate to={"/error"}/>}
+            {logged ? children : <Navigate to="/error404"/>}
         </div>
     )
 };

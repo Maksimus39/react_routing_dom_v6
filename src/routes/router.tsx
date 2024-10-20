@@ -13,29 +13,34 @@ import {ProtectedRoute} from "./ProtectedRoute";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
-        errorElement: <Error404 />,
+        element: <App/>,
+        errorElement: <Error404/>,
         children: [
             {
                 path: PATH.Adidas,
-                element: <ADIDAS />,
+                element: <ADIDAS/>,
             },
             {
                 path: PATH.Puma,
-                element: <PUMA />,
+                element: <PUMA/>,
             },
             {
                 path: PATH.Abibas,
-                element: <ABIBAS />,
+                element: <ABIBAS/>,
             },
             {
                 path: PATH.Model,
-                element: <Model />,
+                element: <Model/>,
             },
             {
                 path: PATH.PROTECTED_PAGE,
-                element:  <ProtectedRoute><ProtectedPage/></ProtectedRoute>
-
+                element: <ProtectedRoute>
+                    <ProtectedPage/>
+                </ProtectedRoute>
+            },
+            {
+                path:PATH.PAGE_ERROR,
+                element: <Error404/>,
             }
         ]
     }
