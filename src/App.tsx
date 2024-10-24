@@ -12,7 +12,8 @@ export const PATH = {
     Model: "/:model/:id",
     PAGE_ERROR: "/error404",
     PAGE_ALL: "/*",
-    PROTECTED_PAGE: '/protected'
+    PROTECTED_PAGE: '/protected',
+    Login: "/login",
 
 } as const;
 

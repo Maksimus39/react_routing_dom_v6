@@ -11,7 +11,7 @@ export const ProtectedRoute = ({children}: Props) => {
 
     return (
         <div>
-            {logged ? children : <Navigate to="/error404"/>}
+            {logged ? children : <Navigate to="/login"/>}
         </div>
     )
 };
