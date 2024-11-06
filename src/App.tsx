@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./components/Site.module.css";
-import {NavLink, Outlet} from "react-router-dom";
+import {Link, NavLink, Outlet, useNavigate} from "react-router-dom";
 import {S} from "./components/pages/_styless"
 
 
@@ -18,6 +18,13 @@ export const PATH = {
 } as const;
 
 function App() {
+
+    const navigate = useNavigate();
+    const navigateHandler = () => {
+        navigate(-1)
+    }
+
+
     return (
         <div>
             <div className={styles.header}><h1>HEADER</h1></div>
@@ -30,6 +37,21 @@ function App() {
                     <S.NavWrapper><NavLink to={PATH.PROTECTED_PAGE}>Защищенная страница</NavLink></S.NavWrapper>
                 </div>
                 <div className={styles.content}>
+
+
+                    <div className={styles.HorizontalNavigation}>
+
+                        <Link to={PATH.Adidas}
+                              className={styles.LinkLikeButton}
+                              onClick={navigateHandler}
+                        >Главная страница(ADIDAS)
+                        </Link>
+
+                        <button  onClick={navigateHandler}
+                        className={styles.ButtonLikeLink}
+                        >Назад</button>
+                    </div>
+
 
                     <Outlet/>
                 </div>

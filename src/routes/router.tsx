@@ -13,6 +13,10 @@ import {Prices} from "../components/pages/Prices";
 
 const publicRoutes: RouteObject[] = [
     {
+        path:'/',
+        element:<Navigate to={PATH.Adidas}/>
+    },
+    {
         path: PATH.Adidas,
         element: <ADIDAS/>,
     },
